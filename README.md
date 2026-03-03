@@ -1,0 +1,1 @@
+This is a small project I made about a simple calculator using PowerShell.
