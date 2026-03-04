@@ -129,7 +129,7 @@ function TemperConversion {
         "---------"
         try{
             [decimal]$Degree = Read-Host "Enter degree"
-            $Choice = Read-Host "Convert to C or F?"
+            $Choice = (Read-Host "Convert to C or F?").ToUpper()
 
             switch($Choice){
                 "F"{ Write-Host "Result: $($Degree * 9/5 + 32)°F" -ForegroundColor Green }
@@ -166,6 +166,7 @@ function CompareCalc{
                         Write-Host "Result: $($num1 / $num2 -eq $num3)" -ForegroundColor Green
                     }
                 }
+                "^"{ Write-Host "Result: $([System.Math]::Pow($num1, $num2) -eq $num3)" -ForegroundColor Green }
                 default{ Write-Host "ERROR: Unknow operator" -ForegroundColor Red }
             }
         }Catch{
@@ -230,3 +231,4 @@ while($true){
     }
 
 }
+
