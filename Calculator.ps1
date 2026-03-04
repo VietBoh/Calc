@@ -152,7 +152,7 @@ function CompareCalc{
         try{
             [decimal]$num1 = Read-Host "Enter first number"
             [decimal]$num2 = Read-Host "Enter second number"
-            $Operator = (Read-Host "Enter Operator (+, -, *, /)").Trim()
+            $Operator = (Read-Host "Enter Operator (+, -, *, /, ^)").Trim()
             [decimal]$num3 = Read-Host "Enter third number"
 
             switch($Operator){
@@ -231,4 +231,5 @@ while($true){
     }
 
 }
+
 
