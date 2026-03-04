@@ -31,7 +31,7 @@ function NorCalc {
                 "*"{ Write-Host "Result: $($num1 * $num2)" -ForegroundColor Green }
                 "/"{
                     if($num2 -eq 0){
-                        Write-Host "Stupid! You can't divide any number by zero." -ForegroundColor DarkRed
+                        Write-Host "You can't divide any number by zero." -ForegroundColor DarkRed
                     }else{
                         Write-Host "Result: $($num1 / $num2)" -ForegroundColor Green
                     }
@@ -228,4 +228,5 @@ while($true){
         3{ Deltal }; 6{ Write-AboutMe }; 7{ Break 2 }
         default{ Write-Host "ERROR: Not On the list" -ForegroundColor Red; Start-Sleep -Seconds 2 }
     }
+
 }
