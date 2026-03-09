@@ -2,6 +2,14 @@ Add-Type -AssemblyName System.Numerics
 
 $Global:Once = 0
 
+$Ver = $PSVersionTable.PSVersion.Major
+
+if ($Ver -lt 5) {
+    Write-Warning "To run this script, you need PowerShell 5 or later."
+    Pause
+    exit
+}
+
 <#
   ===========================
   |  Initialization Script  |
