@@ -1,7 +1,3 @@
-Add-Type -AssemblyName System.Numerics
-
-$Global:Once = 0
-
 $Ver = $PSVersionTable.PSVersion.Major
 
 if ($Ver -lt 5) {
@@ -9,6 +5,10 @@ if ($Ver -lt 5) {
     Pause
     exit
 }
+
+Add-Type -AssemblyName System.Numerics
+
+$Global:Once = 0
 
 <#
   ===========================
@@ -238,5 +238,6 @@ while($true){
         default{ Write-Host "ERROR: Not On the list" -ForegroundColor Red; Start-Sleep -Seconds 2 }
     }
 }
+
 
 
