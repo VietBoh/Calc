@@ -70,7 +70,7 @@ function Trigonometric {
         Write-Host "Trigonometric Calculator" -ForegroundColor DarkYellow
         "---------"
         try{
-            [decimal]$number = Read-Host "Enter a number"
+            [double]$number = Read-Host "Enter a number"
             $Trigo = Read-Host "Enter Trigonometric (Sin, Cos, Tan)"
         
             switch($Trigo){
@@ -238,4 +238,5 @@ while($true){
         default{ Write-Host "ERROR: Not On the list" -ForegroundColor Red; Start-Sleep -Seconds 2 }
     }
 }
+
 
